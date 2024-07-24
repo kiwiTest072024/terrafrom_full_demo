@@ -25,3 +25,11 @@ jobs:
         python -m http.server 8000 &  # Start HTTP server in background
         sleep 1  # Wait for server to start
         curl -sSf http://localhost:8000  # Test if server responds
+    
+    - name: Build and Push Docker Image
+      uses: mr-smithers-excellent/docker-build-push@v4
+      with:
+        image: nanajanashia/demo-app
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
