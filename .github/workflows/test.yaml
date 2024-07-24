@@ -30,6 +30,6 @@ jobs:
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
         image: moustafa25/http_demo
-        registry: docker.io
+        registry: Dockerfile.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
